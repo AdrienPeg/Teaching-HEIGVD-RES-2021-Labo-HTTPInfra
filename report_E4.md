@@ -9,6 +9,7 @@
    /api/students/ (nous recevons des entreprises) soit écrite dans un
    nouveau paragraphe au niveau du footer-info (en dessous de l’email et
    réseaux sociaux).
+
 AJOUTER IMAGE
 
 En effet, chaque deux secondes, un paragraphe s’ajoute sous la forme :
@@ -53,4 +54,13 @@ Envoie des données :
 En faisant inspect element et en regardant dans réseau, nous pouvons constater que des données sont reçue par /api/students/.
 
 Dans la console, nous pouvons voir les objets reçus.
+
+### La démo a besoins du reverse proxy pour fonctionner
+
+Pour des raisons de sécurité, les navigateur web utilisent la « Same-origin policy ». Selon Wikipédia, Avec cette politique, un navigateur Web permet aux scripts contenus dans une première page Web d'accéder aux données d'une seconde page Web, mais uniquement si les deux pages Web ont la même origine.
+
+Puisque dans notre démo, nous contactons des conteneurs différents pour les données statiques et les données dynamiques, le navigateur web nous renverrai des erreurs sans le reverse proxy.
+
+La stratégie du reverse proxy est de faire passer les requêtes du navigateur par lui et ainsi faire croire au à ce dernier que tout provient de la même origine (le reverse proxy).
+
 
