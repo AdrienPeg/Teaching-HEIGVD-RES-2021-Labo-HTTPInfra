@@ -1,0 +1,4 @@
+Etape 4:
+Nous avons changé les dockerfiles afin que vim s’installe directement au lancement des conteneurs.
+Nous avons ajouté un script dans l’image apache afin que toutes les deux secondes, le nom de la première entreprise reçue par /api/students/ soient écris dans un nouveau paragraphe au niveau du footer-info. Les paragraphe s’additionnent.
+Pour lancer cette configuration, il suffit suivre la documentation de l’étape 3.
